@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["eric@northam.us"]
 
   spec.summary       = %q{A gem to work with EasyBroker's API}
-  spec.homepage      = "https://github.com/easybroker/easy_broker_api"
+  spec.homepage      = "https://github.com/easybroker/easybroker_gem/"
   spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)
