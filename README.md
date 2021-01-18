@@ -50,6 +50,16 @@ results.find_each do |property|
   puts property.public_id
 end
 
+# The total number of results of all pages
+results.total 
+
+# The current page
+results.page 
+
+# Loads the next page results
+results.next_page 
+
+
 # Search for only published properties
 client.properties.search(search: { statuses: [:published] } )
 ```
@@ -57,7 +67,7 @@ client.properties.search(search: { statuses: [:published] } )
 You can also pass a logger to log any methods that make remote calls. The logger class must implement a `log` method which will be called with the [HTTParty response](https://www.rubydoc.info/github/jnunemaker/httparty/HTTParty/Response) for every remote request sent.
 
 ```ruby
-EasyBroker.api_client(logger: my_logger)
+EasyBroker.client(logger: my_logger)
 ```
 
 ## Development
