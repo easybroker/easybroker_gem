@@ -1,6 +1,6 @@
 # EasyBroker
 
-A gem that makes it easy to work with the [EasyBroker API](https://api.easybroker.com/api/playground).
+A gem that makes it easy to work with the [EasyBroker API](https://api.easybroker.com/).
 
 ## Installation
 
