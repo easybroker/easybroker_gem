@@ -9,6 +9,9 @@ require 'easy_broker/public_client'
 require 'easy_broker/paginated_response'
 require 'easy_broker/query'
 require 'easy_broker/properties'
+require 'easy_broker/mls_properties'
+require 'easy_broker/contact_requests'
+require 'easy_broker/locations'
 
 module EasyBroker
   def self.configuration

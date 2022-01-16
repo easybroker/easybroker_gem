@@ -10,4 +10,16 @@ class EasyBroker::PublicClient
   def properties
     EasyBroker::Properties.new(api_client)
   end
+
+  def mls_properties
+    EasyBroker::MlsProperties.new(api_client)
+  end
+
+  def contact_requests
+    EasyBroker::ContactRequests.new(api_client)
+  end
+
+  def locations
+    EasyBroker::Locations.new(api_client)
+  end
 end

@@ -28,7 +28,7 @@ EasyBroker.configure do |config|
   config.api_key = 'your_app_key'
 
   # Optionally change the root API URL
-  # config.api_root_url = 'https://www.myebproxy.com/api/v1/'
+  # config.api_root_url = EasyBroker::STAGING_API_ROOT_URL
 end
 ```
 
@@ -68,6 +68,15 @@ You can also pass a logger to log any methods that make remote calls. The logger
 
 ```ruby
 EasyBroker.client(logger: my_logger)
+```
+
+## Available Endpoints
+
+```ruby
+client.locations # List and search geographic locations
+client.contact_requests # List and search contact requests in your account - TDB create via post
+client.properties # List, search and find properties in your account
+client.mls_properties # List, search and find properties in the MLS - requires MLS API Plan
 ```
 
 ## Development
