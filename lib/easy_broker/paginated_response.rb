@@ -17,14 +17,12 @@ class EasyBroker::PaginatedResponse
   end
 
   def page
-    pagination&.page
+    pagination&.page || 1
   end
 
   def next_page
-    next_page_number = page.nil? ? 1 : page + 1
-
-    if next_page_number * limit <= total
-      @response = query.get(next_page_number)
+    if page * limit < total
+      @response = query.get(page + 1)
     end
   end
 
