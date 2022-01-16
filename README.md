@@ -72,6 +72,7 @@ EasyBroker.client(logger: my_logger)
 
 ## Available Endpoints
 
+
 ```ruby
 client.locations # List and search geographic locations
 client.contact_requests # List and search contact requests in your account - TDB create via post
