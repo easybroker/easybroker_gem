@@ -12,6 +12,7 @@ require 'easy_broker/properties'
 require 'easy_broker/mls_properties'
 require 'easy_broker/contact_requests'
 require 'easy_broker/locations'
+require 'easy_broker/listing_statuses'
 
 module EasyBroker
   def self.configuration
