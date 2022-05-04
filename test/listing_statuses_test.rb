@@ -10,7 +10,7 @@ class ListingStatusesTest < EasyBrokerTestBase
   def test_search
     stub_verb_request(:get, '/listing_statuses', query: { page: 1 }).
       to_return(body: mock_search_body.to_json)
-    results = @statuses.search
+    results = statuses.search
     assert_equal 1, results.first
   end
 
