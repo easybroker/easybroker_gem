@@ -1,7 +1,7 @@
 require "test_helper"
 
 class ListingStatusesTest < EasyBrokerTestBase
-  attr_reader :properties
+  attr_reader :statuses
 
   def setup
     @statuses = EasyBroker::ListingStatuses.new(EasyBroker::ApiClient.new)
