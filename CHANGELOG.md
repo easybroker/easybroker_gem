@@ -8,3 +8,6 @@
 
 ## 0.1.3
 * Fixed pagination bug where the last page may not have been included.
+
+## 0.1.4
+* Added support for the listing_statuses endpoint.
