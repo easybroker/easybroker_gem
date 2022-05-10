@@ -22,4 +22,8 @@ class EasyBroker::PublicClient
   def locations
     EasyBroker::Locations.new(api_client)
   end
+
+  def listing_statuses
+    EasyBroker::ListingStatuses.new(api_client)
+  end
 end
