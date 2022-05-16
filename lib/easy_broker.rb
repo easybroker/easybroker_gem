@@ -13,6 +13,7 @@ require 'easy_broker/mls_properties'
 require 'easy_broker/contact_requests'
 require 'easy_broker/locations'
 require 'easy_broker/listing_statuses'
+require 'easy_broker/integration_partners/public_client'
 require 'easy_broker/integration_partners/listing_statuses'
 
 module EasyBroker

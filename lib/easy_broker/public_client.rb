@@ -27,7 +27,7 @@ class EasyBroker::PublicClient
     EasyBroker::ListingStatuses.new(api_client)
   end
 
-  def listing_statuses_for_integrations
-    EasyBroker::IntegrationPartners::ListingStatuses.new(api_client)
+  def integration_partners
+    EasyBroker::IntegrationPartners::PublicClient.new(api_client)
   end
 end
