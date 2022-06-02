@@ -79,7 +79,7 @@ client.contact_requests # List and search contact requests in your account - TDB
 client.properties # List, search and find properties in your account
 client.mls_properties # List, search and find properties in the MLS - requires MLS API Plan
 client.listing_statuses # List and search the listing status for properties. Great for syncing large sets of properties. - includes MLS properties if you have the MLS Plan
-client.integration_partners.listing_statuses # List and search the listing status of pending properties to your integration. For integration partners use only
+client.integration_partners.listing_statuses # List and search the listing status for partner properties. Requires an integration partner api key.
 ```
 
 ## Development
