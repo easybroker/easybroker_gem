@@ -11,3 +11,6 @@
 
 ## 0.1.4
 * Added support for the listing_statuses endpoint.
+
+## 0.1.5
+* Added support for the listing_statuses endpoint for integration partners.
