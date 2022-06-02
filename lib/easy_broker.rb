@@ -15,6 +15,7 @@ require 'easy_broker/locations'
 require 'easy_broker/listing_statuses'
 require 'easy_broker/integration_partners/public_client'
 require 'easy_broker/integration_partners/listing_statuses'
+require 'easy_broker/integration_partners/agencies'
 
 module EasyBroker
   def self.configuration

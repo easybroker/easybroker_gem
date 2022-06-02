@@ -9,6 +9,10 @@ module EasyBroker
         @api_client = api_client
       end
 
+      def agencies
+        EasyBroker::IntegrationPartners::Agencies.new(api_client)
+      end
+
       def listing_statuses
         EasyBroker::IntegrationPartners::ListingStatuses.new(api_client)
       end
