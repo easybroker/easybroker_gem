@@ -5,7 +5,7 @@ module EasyBroker
     'Accept' => 'application/json',
     'User-Agent' => USER_AGENT
   }
-  DEFAULT_API_ROOT_URL = 'https://www.easybroker.com/api/v1'
-  STAGING_API_ROOT_URL = 'https://www.stagingeb.com/api/v1'
+  DEFAULT_API_ROOT_URL = 'https://api.easybroker.com/v1'
+  STAGING_API_ROOT_URL = 'https://api.stagingeb.com/v1'
   AUTHORIZATION_HEADER = 'X-Authorization'
 end

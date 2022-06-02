@@ -34,9 +34,7 @@ class EasyBroker::ApiClient
   private
 
   def send_request(verb, path = '', params = {})
-    query = params[:query] || params['query'] || {}
-
-    self.class.send(verb, path, params.merge(query)).tap do |response|
+    self.class.send(verb, path, params).tap do |response|
       check_errors(response)
       logger&.log response
     end
