@@ -24,6 +24,10 @@ module EasyBroker
       def properties
         EasyBroker::IntegrationPartners::Properties.new(api_client)
       end
+
+      def property_integrations
+        EasyBroker::IntegrationPartners::PropertyIntegrations.new(api_client)
+      end
     end
   end
 end

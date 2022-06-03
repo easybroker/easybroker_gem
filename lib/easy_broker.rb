@@ -18,6 +18,7 @@ require 'easy_broker/integration_partners/agencies'
 require 'easy_broker/integration_partners/agents'
 require 'easy_broker/integration_partners/listing_statuses'
 require 'easy_broker/integration_partners/properties'
+require 'easy_broker/integration_partners/property_integrations'
 
 module EasyBroker
   def self.configuration
