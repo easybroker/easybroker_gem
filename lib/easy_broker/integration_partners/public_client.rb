@@ -20,6 +20,10 @@ module EasyBroker
       def listing_statuses
         EasyBroker::IntegrationPartners::ListingStatuses.new(api_client)
       end
+
+      def properties
+        EasyBroker::IntegrationPartners::Properties.new(api_client)
+      end
     end
   end
 end
