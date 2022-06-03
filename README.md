@@ -83,11 +83,11 @@ client.properties # List, search and find properties in your account
 client.mls_properties # List, search and find properties in the MLS - requires MLS API Plan
 client.listing_statuses # List and search the listing status for properties. Great for syncing large sets of properties. - includes MLS properties if you have the MLS Plan
 
-### Require an integration partner api key.
-client.integration_partners.agencies # List and search active agencies for partner properties.
-client.integration_partners.agents # Search available agents for partner properties. 
+### The following require a partner api key.
+client.integration_partners.agencies # List and search connected agencies.
+client.integration_partners.agents # View detailed agent contact information for those agents assigned to properties.
 client.integration_partners.listing_statuses # List and search the listing status for partner properties.
-client.integration_partners.properties # Search for available properties to synchronize.
+client.integration_partners.properties # View the full property listing and its details.
 client.integration_partners.property_integrations # Update the property integration on EB with the listing status on your website.
 ```
 
