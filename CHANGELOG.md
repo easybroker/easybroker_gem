@@ -14,4 +14,4 @@
 
 ## 1.0.0
 * **Breaking change**: Everytime you make a request `limit`, `page` and `search` no longer should be wrapped inside a `query` key.
-* Since making requests to `www.easybroker.com/api/v1` always redirects to the api subdomain, we updated the root URLs to avoid these redirections.Up
+* Updated endpoints to use the `api` subdomain; `api.easybroker.com/v1` instead of `www.easybroker.com/api/v1`.

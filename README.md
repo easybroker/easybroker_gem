@@ -61,7 +61,7 @@ results.next_page
 
 
 # Search for only published properties
-client.properties.search(search: { statuses: [:published] } )
+client.properties.search(search: { statuses: [:published] }, limit: 1, page: 1)
 ```
 
 You can also pass a logger to log any methods that make remote calls. The logger class must implement a `log` method which will be called with the [HTTParty response](https://www.rubydoc.info/github/jnunemaker/httparty/HTTParty/Response) for every remote request sent.
