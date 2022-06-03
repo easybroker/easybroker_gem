@@ -14,3 +14,6 @@
 
 ## 0.1.5
 * Added support for the listing_statuses endpoint for integration partners.
+
+# 1.0.1
+* Added support for agencies, agents, properties and property_integrations endpoints for integration partners.
