@@ -15,7 +15,7 @@ class MlsPropertiesTest < EasyBrokerTestBase
   end
 
   def test_search
-    stub_verb_request(:get, '/mls_properties', query: { page: 1 }).
+    stub_verb_request(:get, '/mls_properties').
       to_return(body: mock_search_body.to_json)
     results = properties.search
     assert_equal 1, results.first

@@ -8,7 +8,7 @@ class ContactRequestsTest < EasyBrokerTestBase
   end
 
   def test_search
-    stub_verb_request(:get, '/contact_requests', query: { page: 1 }).
+    stub_verb_request(:get, '/contact_requests').
       to_return(body: mock_search_body.to_json)
     results = contact_requests.search
     assert_equal 1, results.first

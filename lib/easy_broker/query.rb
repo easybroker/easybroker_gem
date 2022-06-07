@@ -11,14 +11,8 @@ class EasyBroker::Query
   end
 
   def get(page = nil)
-    query_params[:page] = page_param(page)
+    query_params[:page] = page if page
     response = api_client.get(endpoint, query: query_params)
     JSON.parse(response.body, object_class: OpenStruct)
-  end
-
-  private
-
-  def page_param(page)
-    page || query_params[:page] || DEFAULT_PAGE
   end
 end

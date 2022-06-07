@@ -15,7 +15,7 @@ class PropertiesTest < EasyBrokerTestBase
   end
 
   def test_search
-    stub_verb_request(:get, '/properties', query: { page: 1 }).
+    stub_verb_request(:get, '/properties').
       to_return(body: mock_search_body.to_json)
     results = properties.search
     assert_equal 1, results.first
