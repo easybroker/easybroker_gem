@@ -2,7 +2,6 @@
 
 class EasyBroker::Query
   attr_reader :api_client, :endpoint, :query_params
-  DEFAULT_PAGE = 1
 
   def initialize(api_client, endpoint, query_params)
     @api_client = api_client
