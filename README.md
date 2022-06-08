@@ -61,7 +61,7 @@ results.next_page
 
 
 # Search for only published properties
-client.properties.search(search: { statuses: [:published] } )
+client.properties.search(search: { statuses: [:published] }, limit: 1, page: 1)
 
 # As a partner you can update the property integration on EB
 client.integration_partners.property_integrations.update('EB-123', body: { status: 'successful', listing_url: "https://www.yourwebsite.com/EB-XXXX01" })

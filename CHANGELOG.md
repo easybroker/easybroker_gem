@@ -15,5 +15,9 @@
 ## 0.1.5
 * Added support for the listing_statuses endpoint for integration partners.
 
+## 1.0.0
+* **Breaking change**: `limit`, `page`, and `search` params should be at the root level requests instead of in the `query` hash.
+* Updated endpoints to use the `api` subdomain; `api.easybroker.com/v1` instead of `www.easybroker.com/api/v1`.
+
 # 1.0.1
 * Added support for agencies, agents, properties and property_integrations endpoints for integration partners.
