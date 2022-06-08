@@ -62,6 +62,9 @@ results.next_page
 
 # Search for only published properties
 client.properties.search(search: { statuses: [:published] }, limit: 1, page: 1)
+
+# As a partner you can update the property integration on EB
+client.integration_partners.property_integrations.update('EB-123', body: { status: 'successful', listing_url: "https://www.yourwebsite.com/EB-XXXX01" })
 ```
 
 You can also pass a logger to log any methods that make remote calls. The logger class must implement a `log` method which will be called with the [HTTParty response](https://www.rubydoc.info/github/jnunemaker/httparty/HTTParty/Response) for every remote request sent.
@@ -79,7 +82,13 @@ client.contact_requests # List and search contact requests in your account - TDB
 client.properties # List, search and find properties in your account
 client.mls_properties # List, search and find properties in the MLS - requires MLS API Plan
 client.listing_statuses # List and search the listing status for properties. Great for syncing large sets of properties. - includes MLS properties if you have the MLS Plan
-client.integration_partners.listing_statuses # List and search the listing status for partner properties. Requires an integration partner api key.
+
+### The following require a partner api key.
+client.integration_partners.agencies # List and search connected agencies.
+client.integration_partners.agents # View detailed agent contact information for those agents assigned to properties.
+client.integration_partners.listing_statuses # List and search the listing status for partner properties.
+client.integration_partners.properties # View the full property listing and its details.
+client.integration_partners.property_integrations # Update the property integration on EB with the listing status on your website.
 ```
 
 ## Development

@@ -14,7 +14,11 @@ require 'easy_broker/contact_requests'
 require 'easy_broker/locations'
 require 'easy_broker/listing_statuses'
 require 'easy_broker/integration_partners/public_client'
+require 'easy_broker/integration_partners/agencies'
+require 'easy_broker/integration_partners/agents'
 require 'easy_broker/integration_partners/listing_statuses'
+require 'easy_broker/integration_partners/properties'
+require 'easy_broker/integration_partners/property_integrations'
 
 module EasyBroker
   def self.configuration

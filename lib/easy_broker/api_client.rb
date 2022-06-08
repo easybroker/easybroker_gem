@@ -20,11 +20,11 @@ class EasyBroker::ApiClient
   end
 
   def post(path, query: {}, body: {})
-    send_request(:post, path, query: query, body: body)
+    send_request(:post, path, query: query, body: body.to_json)
   end
 
   def put(path, query: {}, body: {})
-    send_request(:put, path, query: query, body: body)
+    send_request(:put, path, query: query, body: body.to_json)
   end
 
   def delete(path, query: {})
