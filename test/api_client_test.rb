@@ -12,6 +12,17 @@ class ApiClientTest < EasyBrokerTestBase
     client.get('test', query: { param1: 1, param2: 2 })
   end
 
+  def test_country_code_header
+    chile_country_code = 'cl'
+    EasyBroker.configure do |config|
+      config.country_code = chile_country_code
+    end
+    stub_verb_request(:get, 'test').
+      with(headers: { 'Country-Code' => chile_country_code })
+    @client = EasyBroker::ApiClient.new
+    client.get('test')
+  end
+
   def test_get_without_invalid_api_key
     @client = EasyBroker::ApiClient.new
     assert_raises EasyBroker::AuthenticationError do

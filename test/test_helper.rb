@@ -9,4 +9,5 @@ require 'easy_broker_test_base'
 
 EasyBroker.configure do |config|
   config.api_key = 'test_app_key'
+  config.country_code = 'mx'
 end
