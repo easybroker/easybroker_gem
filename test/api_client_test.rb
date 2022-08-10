@@ -13,20 +13,14 @@ class ApiClientTest < EasyBrokerTestBase
   end
 
   def test_country_code_header
-    chile_country_code = 'CL'
-    EasyBroker.configure do |config|
-      config.country_code = chile_country_code
-    end
+    # The config for MX country is set in test_helper
     stub_verb_request(:get, 'test').
-      with(headers: { 'Country-Code' => chile_country_code })
+      with(headers: { 'Country-Code' => 'MX' })
     @client = EasyBroker::ApiClient.new
     client.get('test')
   end
 
   def test_get_without_country_code_header
-    EasyBroker.configure do |config|
-      config.country_code = nil
-    end
     invalid_country_error = 'You need to provide a valid country code in which your integration works'
     exception = assert_raises EasyBroker::AuthenticationError do
       stub_verb_request(:get, 'test').to_return(
