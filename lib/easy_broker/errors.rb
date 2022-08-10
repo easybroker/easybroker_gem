@@ -10,7 +10,7 @@ module EasyBroker
 
   class AuthenticationError < Error
     def initialize(response)
-      super('Invalid API Key or missing permissions', response)
+      super('Invalid API Key or missing configuration', response)
     end
   end
 end
