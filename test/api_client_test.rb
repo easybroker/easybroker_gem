@@ -21,32 +21,18 @@ class ApiClientTest < EasyBrokerTestBase
   end
 
   def test_get_without_country_code_header
-    invalid_country_error = 'You need to provide a valid country code in which your integration works'
-    exception = assert_raises EasyBroker::AuthenticationError do
-      stub_verb_request(:get, 'test').to_return(
-        status: 401,
-        body: {
-          error: invalid_country_error
-        }.to_json
-      )
+    assert_raises EasyBroker::AuthenticationError do
+      stub_verb_request(:get, 'test').to_return(status: 401)
       client.get('test')
     end
-    assert_equal invalid_country_error, exception.message
   end
 
   def test_get_without_invalid_api_key
     @client = EasyBroker::ApiClient.new
-    invalid_api_key_error = 'Your API key is invalid.'
-    exception = assert_raises EasyBroker::AuthenticationError do
-      stub_verb_request(:get, 'test').to_return(
-        status: 401,
-        body: {
-          error: invalid_api_key_error
-        }.to_json
-      )
+    assert_raises EasyBroker::AuthenticationError do
+      stub_verb_request(:get, 'test').to_return(status: 401)
       client.get('test')
     end
-    assert_equal invalid_api_key_error, exception.message
   end
 
   def test_logger
