@@ -21,3 +21,6 @@
 
 # 1.0.1
 * Added support for agencies, agents, properties and property_integrations endpoints for integration partners.
+
+# 1.0.2
+* Added support to configure the country code header for integration partners endpoints.

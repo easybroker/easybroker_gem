@@ -8,6 +8,7 @@ class EasyBrokerTest < Minitest::Test
   def test_config
     # The config is set in test_helper
     assert_equal 'test_app_key', EasyBroker.configuration.api_key
+    assert_equal 'MX', EasyBroker.configuration.country_code
   end
 
   def test_api_client

@@ -29,6 +29,9 @@ EasyBroker.configure do |config|
 
   # Optionally change the root API URL
   # config.api_root_url = EasyBroker::STAGING_API_ROOT_URL
+
+  # As an integration partner you must configure the country code
+  # config.country_code = 'MX'
 end
 ```
 

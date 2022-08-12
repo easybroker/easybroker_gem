@@ -10,8 +10,9 @@ class EasyBroker::ApiClient
   def initialize(logger: nil)
     self.class.base_uri EasyBroker.configuration.api_root_url
     self.class.headers EasyBroker::DEFAULT_HEADERS.merge(
-      EasyBroker::AUTHORIZATION_HEADER => EasyBroker.configuration.api_key
-    )
+      EasyBroker::AUTHORIZATION_HEADER => EasyBroker.configuration.api_key,
+      EasyBroker::COUNTRY_CODE_HEADER => EasyBroker.configuration.country_code
+    ).compact
     @logger = logger
   end
 

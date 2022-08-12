@@ -8,4 +8,5 @@ module EasyBroker
   DEFAULT_API_ROOT_URL = 'https://api.easybroker.com/v1'
   STAGING_API_ROOT_URL = 'https://api.stagingeb.com/v1'
   AUTHORIZATION_HEADER = 'X-Authorization'
+  COUNTRY_CODE_HEADER  = 'Country-Code'
 end
