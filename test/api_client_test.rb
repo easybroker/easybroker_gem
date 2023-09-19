@@ -12,6 +12,13 @@ class ApiClientTest < EasyBrokerTestBase
     client.get('test', query: { param1: 1, param2: 2 })
   end
 
+  def test_use_partner_code_header
+    stub_verb_request(:get, 'test').
+      with(headers: { 'Use-Partner-Code' => 'true' })
+    @client = EasyBroker::ApiClient.new
+    client.get('test')
+  end
+
   def test_country_code_header
     # The config for MX country is set in test_helper
     stub_verb_request(:get, 'test').
