@@ -27,3 +27,6 @@
 
 ## 1.0.3
 * Update httparty dependency from 0.18 to 0.21
+
+## 1.0.4
+* Added support to configure the use partner code header for integration partners endpoints.

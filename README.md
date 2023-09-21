@@ -32,6 +32,9 @@ EasyBroker.configure do |config|
 
   # As an integration partner you must configure the country code
   # config.country_code = 'MX'
+
+  # Get the information from the organizations connected to your site using a partner code
+  # config.use_partner_code = true
 end
 ```
 

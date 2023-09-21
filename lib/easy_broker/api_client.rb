@@ -11,7 +11,8 @@ class EasyBroker::ApiClient
     self.class.base_uri EasyBroker.configuration.api_root_url
     self.class.headers EasyBroker::DEFAULT_HEADERS.merge(
       EasyBroker::AUTHORIZATION_HEADER => EasyBroker.configuration.api_key,
-      EasyBroker::COUNTRY_CODE_HEADER => EasyBroker.configuration.country_code
+      EasyBroker::COUNTRY_CODE_HEADER => EasyBroker.configuration.country_code,
+      EasyBroker::USE_PARTNER_CODE_HEADER => EasyBroker.configuration.use_partner_code&.to_s
     ).compact
     @logger = logger
   end
