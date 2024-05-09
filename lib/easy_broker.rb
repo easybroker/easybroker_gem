@@ -1,4 +1,5 @@
 require 'httparty'
+require 'json'
 
 require 'easy_broker/version'
 require 'easy_broker/constants'
