@@ -1,29 +1,16 @@
 require "test_helper"
 
 class LocationsTest < EasyBrokerTestBase
-  attr_reader :properties
+  attr_reader :locations
 
   def setup
-    @properties = EasyBroker::Locations.new(EasyBroker::ApiClient.new)
+    @locations = EasyBroker::Locations.new(EasyBroker::ApiClient.new)
   end
 
-  def test_search
-    stub_verb_request(:get, '/locations').
-      to_return(body: mock_search_body.to_json)
-    results = properties.search
-    assert_equal 1, results.first
-  end
-
-  private
-
-  def mock_search_body
-    {
-      pagination: {
-        limit: 3,
-        total: 6,
-        page: 1
-      }, 
-      content: [1, 2, 3]
-    }
+  def test_find
+    stub_verb_request(:get, '/locations', query: { query: 'test' }).
+      to_return(body: { name: 'test' }.to_json)
+    location = locations.find('test')
+    assert_equal 'test', location.name
   end
 end

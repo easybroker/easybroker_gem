@@ -83,7 +83,7 @@ EasyBroker.client(logger: my_logger)
 
 
 ```ruby
-client.locations # List and search geographic locations
+client.locations # Find geographic locations
 client.contact_requests # List and search contact requests in your account - TDB create via post
 client.properties # List, search and find properties in your account
 client.mls_properties # List, search and find properties in the MLS - requires MLS API Plan

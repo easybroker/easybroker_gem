@@ -9,8 +9,9 @@ class EasyBroker::Locations
     @api_client = api_client
   end
 
-  def search(query = {})
-    stored_query = EasyBroker::Query.new(api_client, ENDPOINT, query)
-    EasyBroker::PaginatedResponse.new(stored_query)
+  def find(name = nil)
+    query = name ? { query: name } : {}
+    response = api_client.get(ENDPOINT, query: query)
+    JSON.parse(response.body, object_class: OpenStruct)
   end
 end
