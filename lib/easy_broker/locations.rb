@@ -10,7 +10,7 @@ class EasyBroker::Locations
   end
 
   def find(name = nil)
-    query = name ? { query: name } : {}
+    query = { query: name }.compact
     response = api_client.get(ENDPOINT, query: query)
     JSON.parse(response.body, object_class: OpenStruct)
   end
