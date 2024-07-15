@@ -30,3 +30,6 @@
 
 ## 1.0.4
 * Added support to configure the use partner code header for integration partners endpoints.
+
+## 1.1.0
+* **Breaking change**: Changes `EasyBroker::Locations#search` to `EasyBroker::Locations#find`.
