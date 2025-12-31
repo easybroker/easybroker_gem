@@ -1,5 +1,6 @@
 require 'httparty'
 require 'json'
+require 'ostruct'
 
 require 'easy_broker/version'
 require 'easy_broker/constants'
