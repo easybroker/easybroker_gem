@@ -86,8 +86,7 @@ EasyBroker.client(logger: my_logger)
 client.locations # Find geographic locations
 client.contact_requests # List and search contact requests in your account - TDB create via post
 client.properties # List, search and find properties in your account
-client.mls_properties # List, search and find properties in the MLS - requires MLS API Plan
-client.listing_statuses # List and search the listing status for properties. Great for syncing large sets of properties. - includes MLS properties if you have the MLS Plan
+client.listing_statuses # List and search the listing status for properties. Great for syncing large sets of properties.
 
 ### The following require a partner api key.
 client.integration_partners.agencies # List and search connected agencies.
